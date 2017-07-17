@@ -3,7 +3,7 @@ AC_INIT([pick], [1.7.0], [pick-maintainers@calleerlandsson.com])
 AM_INIT_AUTOMAKE([subdir-objects])
 AC_CONFIG_HEADERS([config.h])
 AC_PROG_CC
-AC_CHECK_FUNCS([pledge reallocarray])
+AC_CHECK_FUNCS([pledge reallocarray strtonum])
 AC_SEARCH_LIBS([setupterm], [curses], [],
   [
     AC_SEARCH_LIBS([setupterm], [ncursesw],
