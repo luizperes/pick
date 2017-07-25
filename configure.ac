@@ -12,5 +12,11 @@ AC_SEARCH_LIBS([setupterm], [curses], [],
     )
   ]
 )
+AC_TRY_COMPILE(
+  [#include <sys/signal.h>],
+  [int x = SIGWINCH],
+  [AC_DEFINE([HAVE_SIGWINCH], [1], [Define if SIGWINCH is available.])],
+  []
+)
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
